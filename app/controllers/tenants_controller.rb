@@ -16,7 +16,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :render_record_invalid_respone
     def update
         tenant = find_tenant
         tenant.update!(tenant_params)
-        render json: tenants, status: :ok
+        render json: tenant, status: :ok
     end
 
     private 
